@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>肥丸的云森之旅</title>
+  <meta name="description" content="穿过藤蔓、收集花朵与神奇道具，陪肥丸飞过不断变化的森林天空。" />
+  <meta property="og:title" content="肥丸的云森之旅" />
+  <meta property="og:description" content="穿过藤蔓，飞向星光。轻点屏幕，陪肥丸开启可爱的森林飞行旅程。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://feiwan-cloud-forest.zhouxi665883.chatgpt.site" />
+  <meta property="og:image" content="https://feiwan-cloud-forest.zhouxi665883.chatgpt.site/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="肥丸的云森之旅" />
+  <meta name="twitter:description" content="穿过藤蔓，飞向星光。轻点屏幕，陪肥丸开启可爱的森林飞行旅程。" />
+  <meta name="twitter:image" content="https://feiwan-cloud-forest.zhouxi665883.chatgpt.site/assets/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="game" aria-label="肥丸的云森之旅游戏画面"></canvas>
+    <header class="hud">
+      <div class="hud-actions">
+        <button class="round-button sound" aria-label="声音开关">♫</button>
+        <button id="pauseBtn" class="round-button pause hidden-control" aria-label="暂停游戏">Ⅱ</button>
+      </div>
+      <div class="score-wrap"><span id="score">0</span></div>
+      <div class="best">最佳 <b id="best">0</b></div>
+    </header>
+    <section id="startPanel" class="panel intro">
+      <span class="eyebrow">FOREST SKY</span>
+      <h1>肥丸的<br><em>云森之旅</em></h1>
+      <p>穿过藤蔓，收集护盾与疾风飞羽</p>
+      <button id="startBtn" class="main-button"><i>▶</i> 开始飞行</button>
+      <div class="hint"><kbd>SPACE</kbd><span>或点击屏幕扇动翅膀</span></div>
+    </section>
+    <section id="gameOver" class="panel result hidden">
+      <img class="result-mascot" src="assets/result-feiwan.gif" alt="肥丸庆祝动画" />
+      <h2>飞得真棒！</h2>
+      <div class="result-score"><b id="finalScore">0</b><span>片星光</span></div>
+      <p id="newBest">再试一次，会飞得更远喔</p>
+      <button id="restartBtn" class="main-button">再飞一次</button>
+    </section>
+    <div id="gameOverBanner" class="game-over-banner" aria-hidden="true">
+      <small>旅程结束</small><strong>GAME OVER</strong>
+    </div>
+    <section id="pausePanel" class="panel pause-panel hidden">
+      <span class="eyebrow">TAKE A BREATH</span>
+      <h2>歇一小会儿</h2>
+      <p>肥丸在云朵上等你回来</p>
+      <button id="resumeBtn" class="main-button">继续飞行</button>
+    </section>
+    <div id="toast" class="toast">✦ 穿过藤蔓 ✦</div>
+    <div class="bottom-tip">轻点屏幕 · 保持飞行</div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
